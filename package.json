@@ -1,0 +1,21 @@
+{
+  "name": "other_h5s",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx webpack-dev-server --port 8000 --inline true"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "copy-webpack-plugin": "^4.0.1",
+    "webpack": "^3.6.0"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^2.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack-dev-server": "^2.9.1"
+  }
+}

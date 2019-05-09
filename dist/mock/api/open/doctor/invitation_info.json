@@ -1,0 +1,163 @@
+{
+  "code": 200,
+  "message": "成功",
+  "data": {
+    "image": "https://pic.5aszy.com/group1/M00/00/2F/rBImA1x_gsyAF2eAAAGAVpF4LjE608.jpg",
+    "name": "杨鹏程",
+    "medicalInstitutions": "广誉远国医馆",
+    "titles": "主治医师",
+    "depart": "中医内科",
+    "number": 3,
+    "revisit": "67",
+    "diseaseExpertise": [
+      "眩晕",
+      "抑郁症"
+    ],
+    "introduce": "30年经验",
+    "jobPhotos": [],
+    "articles": [
+      {
+        "articleId": "5cd055b82f396e17a90f2c83",
+        "articleType": "1",
+        "articleTitle": "医案123",
+        "articleContent": "测试",
+        "articleTime": "2019-05-06",
+        "articlePics": [
+          "https://pic.5aszy.com/group1/M00/00/28/rBImA1xmHcGADQrbAAIt_kKjNP0548.jpg",
+          "https://pic.5aszy.com/group1/M00/00/28/rBImA1xmHcOAcK4nAAIt_kKjNP0694.jpg"
+        ]
+      },
+      {
+        "articleId": "5c530f782f396e4ebc20a154",
+        "articleType": "1",
+        "articleTitle": "123",
+        "articleContent": "123456",
+        "articleTime": "2019-01-31",
+        "articlePics": [
+          "http://pic.5aszy.com/group1/M00/00/28/rBImA1xmHcGADQrbAAIt_kKjNP0548.jpg",
+          "http://pic.5aszy.com/group1/M00/00/28/rBImA1xmHcOAcK4nAAIt_kKjNP0694.jpg"
+        ]
+      }
+    ],
+    "isFollow": false,
+    "isRecommend": false,
+    "certificatePics": [
+      "http://pic.5aszy.com/group1/M00/00/10/rBImA1uNR0CAfvPGAADr3S3DYNY362.jpg",
+      "http://pic.5aszy.com/group1/M00/00/10/rBImA1uNRx-APGKFAAHy_x-CPeI312.jpg",
+      "http://pic.5aszy.com/group1/M00/00/10/rBImA1uNR1-AMn6AAADr3S3DYNY605.jpg",
+      "http://pic.5aszy.com/group1/M00/00/10/rBImA1uNR0CAfvPGAADr3S3DYNY362.jpg",
+      "http://pic.5aszy.com/group1/M00/00/10/rBImA1uNRx-APGKFAAHy_x-CPeI312.jpg",
+      "http://pic.5aszy.com/group1/M00/00/10/rBImA1uNR1-AMn6AAADr3S3DYNY605.jpg",
+      "http://pic.5aszy.com/group1/M00/00/10/rBImA1uNRxeACS82AAITI8daEnU433.jpg",
+      "http://pic.5aszy.com/group1/M00/00/10/rBImA1uNR1qAITERAAHLrExwpFI248.jpg"
+    ],
+    "caseNum": 0,
+    "clinicalExperience": 0,
+    "cures": [
+      {
+        "cureId": "5b9f5ef22f396e0ca528fae9",
+        "title": "123456",
+        "time": "2018-09-17",
+        "content": "45678头疼"
+      }
+    ],
+    "appointmentTimes": [
+      "05/06",
+      "05/07",
+      "05/08",
+      "05/09",
+      "05/10",
+      "05/11",
+      "05/12"
+    ],
+    "appointmentMornings": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "appointmentAfternoons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "appointmentNights": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "inquirys": [
+      {
+        "time": "05/08 18:00-24:00",
+        "week": "周三",
+        "quota": 15,
+        "use": 0
+      },
+      {
+        "time": "05/09 10:00-12:00",
+        "week": "周四",
+        "quota": 9,
+        "use": 0
+      },
+      {
+        "time": "05/09 14:00-18:00",
+        "week": "周四",
+        "quota": 20,
+        "use": 0
+      },
+      {
+        "time": "05/09 18:00-24:00",
+        "week": "周四",
+        "quota": 15,
+        "use": 0
+      },
+      {
+        "time": "05/10 10:00-12:00",
+        "week": "周五",
+        "quota": 9,
+        "use": 0
+      },
+      {
+        "time": "05/10 14:00-18:00",
+        "week": "周五",
+        "quota": 20,
+        "use": 0
+      },
+      {
+        "time": "05/10 18:00-24:00",
+        "week": "周五",
+        "quota": 15,
+        "use": 0
+      },
+      {
+        "time": "05/11 10:00-12:00",
+        "week": "周六",
+        "quota": 9,
+        "use": 0
+      },
+      {
+        "time": "05/11 14:00-18:00",
+        "week": "周六",
+        "quota": 20,
+        "use": 0
+      },
+      {
+        "time": "05/11 18:00-24:00",
+        "week": "周六",
+        "quota": 15,
+        "use": 0
+      }
+    ]
+  }
+}

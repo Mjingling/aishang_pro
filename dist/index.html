@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+  <title>医案详情</title>
+  <link href="./styles/main.css" rel="stylesheet" />
+  <script src="./script/flexable.js"></script>
+</head>
+
+<body>
+  <div id="app" v-cloak>
+    <!-- header -->
+    <div class="header_wrapper" ref="fixed_header">
+      <header class="header hide-in-pc">
+        <h2>医案详情</h2>
+      </header>
+    </div>
+    <!-- header -->
+
+    <!-- 医生卡片  -->
+    <section class="doc-label-info">
+    <div class="doc-labelheader">
+      <div class="top-img">
+        <img class="tit-img" src="./images/doc-bg.png">
+      </div>
+      <div class="doc-cont">
+        <div class="doc-tit doctor-info-page">
+          <div class="doc-box">
+            <div class="span">{{docInfo.titles}}</div>
+            <img class="doc-img" :src="docInfo.image">
+            <div class="font30 name mt20">
+              {{docInfo.name}}
+              <span class="font26 ml10">{{docInfo.titles}}</span>
+              <span class="label font18 ml10" style="display:none">推荐</span>
+            </div>
+            <div class="addr mt20">医院机构：{{docInfo.medicalInstitutions}}</div>
+            <div class="info font20 mt20">
+              <span class="label">付款人数{{docInfo.number}}人</span>
+              <span class="label">{{docInfo.revisit}}复诊率</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!-- 医生卡片 -->
+
+    <!-- 医生简单介绍 -->
+    <!-- <div class="doctor-info-wrapper">
+      <div class="doc-avater">
+        <img :src="caseInfo.headImag" />
+      </div>
+      <div class="doc-info">
+        <span class="depart-label">{{caseInfo.departName}}</span>
+        <div> {{caseInfo.doctorName}} {{caseInfo.titles}}</div>
+        <div class="share-info">{{caseInfo.title}} </div>
+      </div>
+    </div> -->
+    <!-- 医生简单介绍 -->
+    <!-- 详情列表 -->
+    <section class="details-list">
+        <!-- 医生案例 -->
+        <section  class="details-list-cell" >
+          <h2 class="cell-title">{{caseInfo.title}}</h2>
+          <!-- <div class="cell-content">
+            {{caseInfo.title}}
+          </div> -->
+        </section>
+        <!-- 医生案例 -->
+        <section  class="details-list-cell" >
+          <h2 class="cell-title">医生简介</h2>
+          <div class="cell-content">
+            {{docInfo.introduce}}
+          </div>
+        </section>
+        <!-- 医生案例 -->
+        <section  class="details-list-cell" >
+          <h2 class="cell-title">医案</h2>
+          <div class="cell-content">
+            {{caseInfo.patientInfo}}
+          </div>
+        </section>
+        <!-- 患者症候 -->
+        <section class="details-list-cell">
+          <h2 class="cell-title">患者症候</h2>
+          <div class="cell-content">
+            {{caseInfo.appeal}}
+          </div>
+          <!-- 图片列表 -->
+          <div v-if="caseInfo.casePics.length > 0" class="cell-imgs">
+            <div @click="showPreviewImg(imgitem)" v-for="(imgitem,index) in caseInfo.casePics" class="cell-img-item">
+              <img :src="imgitem" />
+            </div>
+          </div>
+          <!-- 图片列表 -->
+        </section>
+        <!-- 处方 -->
+        <section  class="details-list-cell">
+          <h2 class="cell-title">处方</h2>
+          <div class="cell-content">
+            {{caseInfo.prescription}}
+          </div>
+        </section>
+        <!-- 心得分享 -->
+        <section class="details-list-cell">
+          <h2 class="cell-title">心得分享</h2>
+          <div class="cell-content">
+            {{caseInfo.shareContent}}
+          </div>
+        </section>
+    </section>
+    <!-- 详情列表 -->
+
+    <!-- 合作 -->
+    <div class="hezuo-banner">
+      <img src="./images/hezuo.jpeg" />
+    </div>
+    <!-- 合作 -->
+    <!-- 下载爱尚中医 -->
+    <div class="collapse-tips">
+      <p>下载爱尚中医平台分享您的精彩学术和医案，助力中医精髓万年薪火相传，福泽众生！</p>
+      <a href="https://www.5aszy.com/dl/doctor.html" class="open-app-btn">下载爱尚中医</a>
+    </div>
+    <!-- 下载爱尚中医 -->
+    <!-- footer -->
+    <footer class="copyright">
+      <div>Copyright © 2018 爱尚中医科技(深圳)有限公司</div>
+      <div>备案：粤ICP备18071397号</div>
+    </footer>
+    <!-- 图片预览 -->
+    <div class="preImg" v-show="isShowPerImg">
+      <img :src="perImgUrl" alt="爱问医联" />
+      <div @click="closePreviewImg" class="perview-close">关闭预览</div>
+    </div>
+    <!-- 图片预览 -->
+    <div v-show="isLoadingPage">
+      <div class="loading_page">
+        <div class="loading">
+          <img width="24" height="24" src="./images/loading.gif">
+          <p class="desc">加载中...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./script/zepto.min.js"></script>
+  <script src="./script/vue.min.js"></script>
+  <script>
+    //是否生产模式
+    var IS_PRODUCTION = true;
+  </script>
+<script type="text/javascript" src="./script/app.f1642500a677f9f92d7d.js"></script></body>
+
+</html>
