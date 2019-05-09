@@ -38,7 +38,7 @@ new Vue({
     this.queryString = this.getQueryString();
     this.docId = this.queryString.docId;
     this.caseId = this.queryString.caseId;
-    this.token = this.queryString.token;
+    this.token = this.queryString.token||"";
     this.isLoadingPage = true;
     this.getDocInfo();
     this.getCaseInfo();
@@ -60,17 +60,37 @@ new Vue({
         }
       });
     },
+    // getCaseInfo: function () {
+    //   var _this = this;
+    //   var url = "/api/case/";
+    //   $.get(API_URL + url + this.caseId +".json",{token:this.token},function (res) {
+    //     _this.isLoadingPage = false;
+    //     if(res.code == 200){
+    //       _this.caseInfo = res.data;
+    //     }else if(res.code == 403){
+    //       // toast.tip(res.message);
+    //     }
+    //   },"json");
+    // },
     getCaseInfo: function () {
       var _this = this;
       var url = "/api/case/";
-      $.get(API_URL + url + this.caseId +".json",{token:this.token},function (res) {
-        _this.isLoadingPage = false;
-        if(res.code == 200){
-          _this.caseInfo = res.data;
-        }else if(res.code == 403){
-          // toast.tip(res.message);
+      $.ajax({
+        url:API_URL + url + this.caseId +".json",
+        method:"get",
+        dataType:"json",
+        headers:{
+          token: _this.token
+        },
+        success:function (res) {
+          _this.isLoadingPage = false;
+          if(res.code == 200){
+            _this.caseInfo = res.data;
+          }else if(res.code == 403){
+            // toast.tip(res.message);
+          }
         }
-      },"json");
+      });
     },
     getQueryString: function () {
       var search = location.search.substring(1);
