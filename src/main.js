@@ -33,6 +33,24 @@ new Vue({
       "departName": "..."
     },
     detailList: [],
+    caseComments: [
+      {
+        "headImag": "https://pic.5aszy.com/group1/M00/00/2F/rBImA1x_gsyAF2eAAAGAVpF4LjE608.jpg",
+        "doctorName": "斩三",
+        "time": "2019年4月20日",
+        "titles": "主任医师",
+        "departName": "内分泌科",
+        content: "内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科",
+      },
+      {
+        "headImag": "https://pic.5aszy.com/group1/M00/00/2F/rBImA1x_gsyAF2eAAAGAVpF4LjE608.jpg",
+        "doctorName": "斩三",
+        "time": "2019年4月20日",
+        "titles": "主任医师",
+        "departName": "内分泌科",
+        content: "内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科",
+      }
+    ],
   },
   created() {
     this.queryString = this.getQueryString();
@@ -42,6 +60,7 @@ new Vue({
     this.isLoadingPage = true;
     this.getDocInfo();
     this.getCaseInfo();
+    this.getCaseComments();
   },
   methods: {
     showPreviewImg: function (url) {
@@ -58,20 +77,8 @@ new Vue({
         if (res.code == 200) {
           _this.docInfo = res.data;
         }
-      });
+      },"json");
     },
-    // getCaseInfo: function () {
-    //   var _this = this;
-    //   var url = "/api/case/";
-    //   $.get(API_URL + url + this.caseId +".json",{token:this.token},function (res) {
-    //     _this.isLoadingPage = false;
-    //     if(res.code == 200){
-    //       _this.caseInfo = res.data;
-    //     }else if(res.code == 403){
-    //       // toast.tip(res.message);
-    //     }
-    //   },"json");
-    // },
     getCaseInfo: function () {
       var _this = this;
       var url = "/api/case/";
@@ -87,7 +94,30 @@ new Vue({
           if(res.code == 200){
             _this.caseInfo = res.data;
           }else if(res.code == 403){
-            // toast.tip(res.message);
+            toast.tip(res.message);
+          }else{
+            toast.tip(res.message);
+          }
+        }
+      });
+    },
+    getCaseComments: function () {
+      var _this = this;
+      var url = "/api/comments/get_comment.json";
+      $.ajax({
+        url: API_URL + url + "?caseId=" + this.caseId,
+        method:"get",
+        dataType:"json",
+        headers:{
+          token: _this.token
+        },
+        success:function (res) {
+          if(res.code == 200){
+            _this.caseComments = res.data;
+          }else if(res.code == 403){
+            toast.tip(res.message);
+          }else{
+            toast.tip(res.message);
           }
         }
       });

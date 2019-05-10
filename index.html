@@ -110,6 +110,29 @@
             {{caseInfo.shareContent}}
           </div>
         </section>
+        <!-- 留言列表 -->
+        <section class="details-list-cell">
+          <h2 class="cell-title">留言</h2>
+          <div class="cell-caseComments">
+            <div class="caseComments-item" v-for="(commentitem,index) in caseComments">
+              <div class="caseComments-item-avater">
+                <img :src="commentitem.headImag" />
+              </div>
+              <div class="caseComments-item-info-wrapper">
+                <div class="caseComments-doc-info">
+                  <p>
+                    <span class="font30">{{commentitem.doctorName}}</span>
+                    <span class="font26">{{commentitem.titles}}</span>
+                  </p>
+                  <p class="time font26">{{commentitem.time}}</p>
+                </div>
+                <div class="caseComments-content">
+                  {{commentitem.content}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
     </section>
     <!-- 详情列表 -->
 
@@ -148,7 +171,7 @@
   <script src="./script/vue.min.js"></script>
   <script>
     //是否生产模式
-    var IS_PRODUCTION = false
+    var IS_PRODUCTION = true;
   </script>
 </body>
 

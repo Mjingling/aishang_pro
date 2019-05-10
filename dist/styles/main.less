@@ -693,3 +693,33 @@ footer.copyright {
   }
 }
 
+//留言列表
+.caseComments-item{
+  display: flex;
+  align-items: flex-start;
+  padding: 15px 0;
+  border-bottom: .02rem solid #e8e8e8;
+  .caseComments-item-avater{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    img{
+      width: 100%;
+    }
+  }
+  .caseComments-item-info-wrapper{
+    display: flex;
+    flex: 1;
+    margin-left: 10px;
+    flex-direction: column;
+    overflow: hidden;
+
+    .time{
+      color: #cacaca;
+    }
+  }
+  .caseComments-content{
+    color: #9b9b9b;
+  }
+}
