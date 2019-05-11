@@ -33,23 +33,7 @@ new Vue({
       "departName": "..."
     },
     detailList: [],
-    caseComments: [
-      {
-        "id": "https://pic.5aszy.com/group1/M00/00/2F/rBImA1x_gsyAF2eAAAGAVpF4LjE608.jpg",
-        "headImage": "https://pic.5aszy.com/group1/M00/00/2F/rBImA1x_gsyAF2eAAAGAVpF4LjE608.jpg",
-        "name": "斩三",
-        "time": "2019年4月20日",
-        "content": "内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科",
-      },
-      {
-        "headImag": "https://pic.5aszy.com/group1/M00/00/2F/rBImA1x_gsyAF2eAAAGAVpF4LjE608.jpg",
-        "doctorName": "斩三",
-        "time": "2019年4月20日",
-        "titles": "主任医师",
-        "departName": "内分泌科",
-        content: "内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科",
-      }
-    ],
+    caseComments: [],
   },
   created() {
     this.queryString = this.getQueryString();

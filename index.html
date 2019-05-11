@@ -63,7 +63,7 @@
     <section class="details-list">
         <!-- 医生案例 -->
         <section  class="details-list-cell" >
-          <h2 class="cell-title">{{caseInfo.title}}</h2>
+          <h2 class="cell-title font-blod">{{caseInfo.title}}</h2>
           <!-- <div class="cell-content">
             {{caseInfo.title}}
           </div> -->
@@ -111,7 +111,7 @@
           </div>
         </section>
         <!-- 留言列表 -->
-        <section class="details-list-cell">
+        <section v-if="caseComments.length>0" class="details-list-cell">
           <h2 class="cell-title">留言</h2>
           <div class="cell-caseComments">
             <div class="caseComments-item" v-for="(commentitem,index) in caseComments">

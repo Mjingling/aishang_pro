@@ -13,7 +13,13 @@ module.exports = {
     publicPath: "./"
   },
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    port:8000,
+    hot: true,
+    watchContentBase: true,
+    open: true,
+    overlay: true,
+    compress: true,
+    contentBase: path.join(__dirname,"dist"),
     proxy: {
       "/doctorapi": {
         target: "https://doctor.5aszy.com",

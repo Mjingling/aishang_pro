@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx webpack-dev-server --port 8000 --inline true"
+    "start": "npx webpack-dev-server --inline --progress --config ./webpack.config.js"
   },
   "keywords": [],
   "author": "",
