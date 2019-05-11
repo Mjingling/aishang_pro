@@ -3,33 +3,22 @@
   "message": "成功",
   "page": {
     "pageIndex": 1,
-    "pageSize": 20,
-    "pageCount": 1,
+    "pageSize": 1,
+    "pageCount": 3,
     "total": 3
   },
-  "data": [{
-      "owner": true,
-      "headImage": "",
-      "name": "",
-      "id": "5ba20f618a116d68dcabd56e",
-      "time": "2018-09-19 16:57:05",
-      "content": "我们医院有兴趣+2"
-    },
+  "data": [
     {
-      "owner": true,
-      "headImage": "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1528801875&di=931b5d33a5e771246e6133749fc169de&src=http://mvimg10.meitudata.com/5a059d589a7825502.jpg",
-      "name": "刘洁",
-      "id": "5ba20f5e8a116d68dcabd56d",
-      "time": "2018-09-19 16:57:02",
-      "content": "我们医院有兴趣+1"
-    },
-    {
-      "owner": true,
-      "headImage": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528811975746&di=3f4e0edca6b21cb21f5ff5df01a63a12&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20170616%2Fdb0658565109477ea8897e5b96a1fcb2.png",
-      "name": "刘洁",
-      "id": "5ba20f1c8a116d68dcabd56c",
-      "time": "2018-09-19 16:55:55",
-      "content": "我们医院有兴趣"
+      "commentId": "5cd6aa0e2f396e0681f68c56",
+      "businessId": "5c6d52212f396e42e5aa5d78",
+      "content": "非常好的医案，收益匪浅！鬼针草这个药很神奇，张老师在这里用得很妙啊！",
+      "realName": "游客",
+      "headPhoto": "https://pic.5aszy.com/static/image/youke.png",
+      "titles": null,
+      "createTime": "5分钟前",
+      "count": 0,
+      "owner": false,
+      "comment": null
     }
   ]
 }

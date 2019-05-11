@@ -723,3 +723,83 @@ footer.copyright {
     color: #9b9b9b;
   }
 }
+
+//加载更多
+.loading-more{
+  text-align: center;
+  color: #9b9b9b;
+  line-height: 40px;
+  .font26;
+}
+
+/*底部对话内容发送悬浮栏*/
+@r:75rem;
+body{
+  padding-bottom: 76/@r;
+}
+.text-area-focus-cover{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, .6);
+}
+.edit_area{
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  // height: 76/@r;
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  padding: 10/@r 15/@r;
+  border-top: 1px solid #eee;
+  .edit_txt{
+    flex: 1;
+    width: 0;
+    textarea{
+      box-sizing: border-box;
+      width: 100%;
+      height: 54/@r;
+      line-height: 38/@r;
+      font-size: 20/@r;
+      color: #2D2D2D;
+      border: 1px solid #EFEFEF;
+      padding: 12/@r 16/@r;
+      border-radius: 30/@r;
+      background-color: #F6F7FA;
+      &::-webkit-input-placeholder {
+        color: #AEB1B6;
+      }
+      &::-moz-placeholder {
+        color: #AEB1B6;
+      }
+      &:-moz-placeholder {
+        color: #AEB1B6;
+      }
+      &:-ms-input-placeholder {
+        color: #AEB1B6;
+      }
+
+      &.textAreaFocus{
+        height: 80px;
+      }
+    }
+  }
+  .edit_btn{
+    display: flex;
+    align-items: center;
+    a{
+      display: block;
+      padding: 0 0/@r 0 20/@r;
+      font-size: 20/@r;
+      line-height: 54/@r;
+      color: @main_color;
+      &.disabled{color: #AEB1B6;}
+    }
+  }
+}

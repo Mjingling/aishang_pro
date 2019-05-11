@@ -116,22 +116,30 @@
           <div class="cell-caseComments">
             <div class="caseComments-item" v-for="(commentitem,index) in caseComments">
               <div class="caseComments-item-avater">
-                <img v-if="commentitem.headImage!=''" :src="commentitem.headImage" />
+                <img v-if="commentitem.headImage!=''" :src="commentitem.headPhoto" />
                 <img v-else src="./images/img_doc_emp@2x.png" />
               </div>
               <div class="caseComments-item-info-wrapper">
                 <div class="caseComments-doc-info">
                   <p>
-                    <span class="font30">{{commentitem.name || "游客"}}</span>
+                    <span class="font30">{{commentitem.realName || "游客"}}</span>
                     <span class="font26">{{commentitem.titles}}</span>
                   </p>
-                  <p class="time font26">{{commentitem.time}}</p>
+                  <p class="time font26">{{commentitem.createTime}}</p>
                 </div>
                 <div class="caseComments-content">
                   {{commentitem.content}}
                 </div>
               </div>
             </div>
+            <!--  -->
+            <div v-if="!commentEnd" @click="getCaseComments" class="loading-more">
+              {{loadingComment? "加载中...":"点击加载更多"}}
+            </div>
+            <div v-else  class="loading-more">
+              木有更多了^_^
+            </div>
+            <!--  -->
           </div>
         </section>
     </section>
@@ -167,6 +175,18 @@
         </div>
       </div>
     </div>
+
+    <!-- 评论按钮 -->
+    <div class="text-area-focus-cover" @click="fixHeight" v-show="textAreaFocus"></div>
+    <div class="edit_area">
+      <div class="edit_txt">
+        <textarea :class="{'textAreaFocus':textAreaFocus}" @focus="fixHeight" class="text" placeholder="请输入您的评论..." v-model="sentCont"></textarea>
+      </div>
+      <div class="edit_btn">
+        <a href="javascript:;" :class="{'disabled':!isChecked}" @click="sentMessage">评论</a>
+      </div>
+    </div>
+    <!-- 评论按钮 -->
   </div>
   <script src="./script/zepto.min.js"></script>
   <script src="./script/vue.min.js"></script>
@@ -174,6 +194,6 @@
     //是否生产模式
     var IS_PRODUCTION = true;
   </script>
-<script type="text/javascript" src="./script/app.12c6dff70ec288bf22a1.js"></script></body>
+<script type="text/javascript" src="./script/app.79c426f66ddadde448ce.js"></script></body>
 
 </html>
