@@ -1,6 +1,5 @@
 
 
-var API_URL = PATAINT_API_URL = "../mock";
 if (IS_PRODUCTION){
   //生产环境配置
   API_URL = "https://doctor.5aszy.com";
@@ -10,6 +9,7 @@ if (IS_PRODUCTION){
   API_URL = "/doctorapi";
   PATAINT_API_URL = "/patientapi";
 }
+var API_URL = PATAINT_API_URL = "../mock";
 
 new Vue({
   el: "#app",
@@ -35,12 +35,11 @@ new Vue({
     detailList: [],
     caseComments: [
       {
-        "headImag": "https://pic.5aszy.com/group1/M00/00/2F/rBImA1x_gsyAF2eAAAGAVpF4LjE608.jpg",
-        "doctorName": "斩三",
+        "id": "https://pic.5aszy.com/group1/M00/00/2F/rBImA1x_gsyAF2eAAAGAVpF4LjE608.jpg",
+        "headImage": "https://pic.5aszy.com/group1/M00/00/2F/rBImA1x_gsyAF2eAAAGAVpF4LjE608.jpg",
+        "name": "斩三",
         "time": "2019年4月20日",
-        "titles": "主任医师",
-        "departName": "内分泌科",
-        content: "内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科",
+        "content": "内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科内分泌科",
       },
       {
         "headImag": "https://pic.5aszy.com/group1/M00/00/2F/rBImA1x_gsyAF2eAAAGAVpF4LjE608.jpg",
@@ -103,9 +102,9 @@ new Vue({
     },
     getCaseComments: function () {
       var _this = this;
-      var url = "/api/comments/get_comment.json";
+      var url = "/api/res/comment/get_comment_list.json";
       $.ajax({
-        url: API_URL + url + "?caseId=" + this.caseId,
+        url: API_URL + url + "?business=" + this.caseId,
         method:"get",
         dataType:"json",
         headers:{

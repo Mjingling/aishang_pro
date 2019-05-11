@@ -116,12 +116,12 @@
           <div class="cell-caseComments">
             <div class="caseComments-item" v-for="(commentitem,index) in caseComments">
               <div class="caseComments-item-avater">
-                <img :src="commentitem.headImag" />
+                <img :src="commentitem.headImage" />
               </div>
               <div class="caseComments-item-info-wrapper">
                 <div class="caseComments-doc-info">
                   <p>
-                    <span class="font30">{{commentitem.doctorName}}</span>
+                    <span class="font30">{{commentitem.name}}</span>
                     <span class="font26">{{commentitem.titles}}</span>
                   </p>
                   <p class="time font26">{{commentitem.time}}</p>
