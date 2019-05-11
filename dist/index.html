@@ -116,12 +116,13 @@
           <div class="cell-caseComments">
             <div class="caseComments-item" v-for="(commentitem,index) in caseComments">
               <div class="caseComments-item-avater">
-                <img :src="commentitem.headImage" />
+                <img v-if="commentitem.headImage!=''" :src="commentitem.headImage" />
+                <img v-else src="./images/img_doc_emp@2x.png" />
               </div>
               <div class="caseComments-item-info-wrapper">
                 <div class="caseComments-doc-info">
                   <p>
-                    <span class="font30">{{commentitem.name}}</span>
+                    <span class="font30">{{commentitem.name || "游客"}}</span>
                     <span class="font26">{{commentitem.titles}}</span>
                   </p>
                   <p class="time font26">{{commentitem.time}}</p>
@@ -173,6 +174,6 @@
     //是否生产模式
     var IS_PRODUCTION = true;
   </script>
-<script type="text/javascript" src="./script/app.ac0bf640e21884a3976a.js"></script></body>
+<script type="text/javascript" src="./script/app.12c6dff70ec288bf22a1.js"></script></body>
 
 </html>
