@@ -1,4 +1,5 @@
 var path = require("path");
+var webpack = require("webpack");
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
@@ -11,12 +12,19 @@ module.exports = {
     filename: "script/[name].[hash].js",
     publicPath: "./"
   },
-  plugins:[
+  plugins: [
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',
-      inject: true
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false,
+        removeAttributeQuotes: true
+        // more options:
+        // https://github.com/kangax/html-minifier#options-quick-reference
+      }
     }),
     new CleanWebpackPlugin(),
     // copy custom static assets
