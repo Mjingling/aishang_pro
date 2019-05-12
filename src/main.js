@@ -1,3 +1,4 @@
+var API_URL = PATAINT_API_URL = "";
 // var API_URL = PATAINT_API_URL = "../mock";
 
 if (IS_PRODUCTION){
@@ -158,7 +159,7 @@ new Vue({
               "realName": "游客",
               "headPhoto": "https://pic.5aszy.com/static/image/youke.png",
               "titles": null,
-              "createTime": "5分钟前",
+              "createTime": "刚刚",
               "count": 0,
               "owner": false,
               "comment": null

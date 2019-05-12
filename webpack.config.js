@@ -16,9 +16,12 @@ module.exports = {
     port:8000,
     hot: true,
     watchContentBase: true,
+    publicPath: "/",
     open: true,
-    overlay: true,
+    // overlay: true,
     compress: true,
+    progress: true,
+    // host:"0.0.0.0",//默认localhost 只能本地访问，若希望局域网可以访问，作为一个服务，配置为0.0.0
     contentBase: path.join(__dirname,"dist"),
     proxy: {
       "/doctorapi": {
@@ -36,6 +39,9 @@ module.exports = {
         }
       }
     },
+    watchOptions:{
+      poll:true
+    }
   },
   plugins:[
     new webpack.HotModuleReplacementPlugin(),

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx webpack-dev-server --inline --progress --config ./webpack.config.js"
+    "start": "webpack-dev-server --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
