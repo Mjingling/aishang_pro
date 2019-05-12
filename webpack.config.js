@@ -13,16 +13,17 @@ module.exports = {
     publicPath: "./"
   },
   devServer: {
-    port:8000,
-    hot: true,
+    host:"0.0.0.0",//默认localhost 只能本地访问，若希望局域网可以访问，作为一个服务，配置为0.0.0.0
+    port:8000,//服务启动的端口号
+    hot: true,//启动热更新
     watchContentBase: true,
     publicPath: "/",
-    open: true,
+    contentBase: path.join(__dirname,"dist"),//必须是绝对路径 服务启动的目录
+    open: true,//启动后自动打开浏览器
     // overlay: true,
-    compress: true,
-    progress: true,
-    // host:"0.0.0.0",//默认localhost 只能本地访问，若希望局域网可以访问，作为一个服务，配置为0.0.0
-    contentBase: path.join(__dirname,"dist"),
+    compress: true,//启用压缩
+    progress: true,//打包时显示打包进程
+    //设置代理
     proxy: {
       "/doctorapi": {
         target: "https://doctor.5aszy.com",
